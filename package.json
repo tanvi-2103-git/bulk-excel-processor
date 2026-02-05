@@ -1,18 +1,24 @@
 {
   "name": "bulk-excel-processor",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A bulk Excel file processor with background processing and progress tracking",
+  "main": "dist/server.js",
   "scripts": {
     "dev": "nodemon --exec ts-node src/server.ts",
     "build": "tsc",
-    "start": "node dist/server.js"
+    "start": "node dist/server.js",
+    "lint": "tsc --noEmit"
   },
-  "keywords": [],
+  "keywords": ["excel", "bulk-processor", "nodejs", "typescript"],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/multer": "^2.0.0",
     "@types/node": "^25.2.0",
     "@types/pg": "^8.16.0",
     "nodemon": "^3.1.11",
@@ -20,8 +26,6 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@types/express": "^5.0.6",
-    "@types/multer": "^2.0.0",
     "dotenv": "^17.2.3",
     "exceljs": "^4.4.0",
     "express": "^5.2.1",
